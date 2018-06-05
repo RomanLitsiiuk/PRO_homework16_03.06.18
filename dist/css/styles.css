@@ -102,23 +102,68 @@ body {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
-  position: relative;
 }
 .Header {
   text-align: center;
   font-weight: 300;
   padding: 20px 0;
 }
-.Button {
+.ButtonBlock {
+  display: flex;
+  align-items: center;
+}
+.ButtonBlock-alert {
   border: 1px solid black;
   width: 200px;
   padding: 20px 0;
-  margin: 30px auto;
+  margin: 30px 50px;
   text-align: center;
   background-color: #ccc;
 }
-.Button:hover {
+.ButtonBlock-alert:hover {
   cursor: pointer;
+}
+.ButtonBlock-confirm {
+  border: 1px solid black;
+  width: 200px;
+  padding: 20px 0;
+  margin: 30px 50px;
+  text-align: center;
+  background-color: #ccc;
+}
+.ButtonBlock-confirm:hover {
+  cursor: pointer;
+}
+.ButtonBlock-prompt {
+  border: 1px solid black;
+  width: 200px;
+  padding: 20px 0;
+  margin: 30px 50px;
+  text-align: center;
+  background-color: #ccc;
+}
+.ButtonBlock-prompt:hover {
+  cursor: pointer;
+}
+.ButtonBlock-confirmAnswer {
+  border: 1px solid #11625B;
+  width: 200px;
+  height: 40px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+.ButtonBlock-promptAnswer {
+  border: 1px solid #11625B;
+  min-width: 400px;
+  height: 40px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  box-sizing: border-box;
 }
 .Alert {
   visibility: hidden;
@@ -161,7 +206,6 @@ body {
 }
 .Alert-button:hover {
   background-color: #00C5F5;
-  transition: 0.2s;
 }
 .Alert-closeButton {
   border: 1px solid #12335A;
@@ -177,5 +221,147 @@ body {
   right: 2px;
 }
 .Alert.isActive {
+  visibility: visible;
+}
+.Confirm {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.Confirm-window {
+  border: 1px solid #12335A;
+  width: 340px;
+  height: 240px;
+  box-sizing: border-box;
+  background-color: #F1F0F0;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  position: absolute;
+  top: calc((100vh / 2) - 120px);
+  left: calc(50% - 170px);
+}
+.Confirm-message {
+  text-align: center;
+  font-size: 20pt;
+  color: #D8403E;
+  padding: 20px 20px;
+}
+.Confirm-yesButton {
+  border: 1px solid #12335A;
+  padding: 10px 26px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 15pt;
+}
+.Confirm-yesButton:hover {
+  background-color: #00C5F5;
+}
+.Confirm-noButton {
+  border: 1px solid #12335A;
+  padding: 10px 26px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 15pt;
+}
+.Confirm-noButton:hover {
+  background-color: #00C5F5;
+}
+.Confirm-closeButton {
+  border: 1px solid #12335A;
+  background: url("../../src/images/close.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15px auto;
+  width: 23px;
+  height: 23px;
+  border-radius: 12px;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+.Confirm.isActive {
+  visibility: visible;
+}
+.Prompt {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.Prompt-window {
+  border: 1px solid #12335A;
+  width: 340px;
+  height: 240px;
+  box-sizing: border-box;
+  background-color: #F1F0F0;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  position: absolute;
+  top: calc((100vh / 2) - 120px);
+  left: calc(50% - 170px);
+}
+.Prompt-message {
+  text-align: center;
+  font-size: 20pt;
+  color: #D8403E;
+  padding: 20px 20px;
+}
+.Prompt-inputText {
+  border: 1px solid #12335A;
+  width: 260px;
+  min-height: 30px;
+  overflow-wrap: break-word;
+}
+.Prompt-yesButton {
+  border: 1px solid #12335A;
+  padding: 10px 26px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 15pt;
+}
+.Prompt-yesButton:hover {
+  background-color: #00C5F5;
+}
+.Prompt-noButton {
+  border: 1px solid #12335A;
+  padding: 10px 26px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 15pt;
+}
+.Prompt-noButton:hover {
+  background-color: #00C5F5;
+}
+.Prompt-closeButton {
+  border: 1px solid #12335A;
+  background: url("../../src/images/close.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15px auto;
+  width: 23px;
+  height: 23px;
+  border-radius: 12px;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+.Prompt.isActive {
   visibility: visible;
 }

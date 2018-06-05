@@ -4,24 +4,60 @@
   <meta charset="UTF-8">
   <title>Robot</title>
   <link rel="stylesheet" type="text/css" href="dist/css/styles.css">
-  <script src="src/js/main.js" defer></script>
-  <!--<script src="src/js/alert.js" defer></script>
-  <script src="src/js/confirm.js" defer></script>
-  <script src="src/js/prompt.js" defer></script>-->
+  <script src="src/js/main.js"></script>
+  <script src="src/js/alert.js"></script>
+  <script src="src/js/confirm.js"></script>
+  <script src="src/js/prompt.js"></script>
 </head>
 <body>
   <div class="Container">
     <h2 class="Header">Hello, windows!</h2>
-    <div class="Button Button--alert" id="mainAlertButton"><p>Кнопка Alert!</p></div>
-    <div class="Alert isActive" id="alert">
-      <div class="Alert-window">
-        <p class="Alert-message">ALARM!!!<br>Detroy robot monster moon attack!</p>
-        <button class="Alert-button">Ok!</button>
-        <button class="Alert-closeButton"></button>
-      </div>
+    <div class="ButtonBlock">
+      <p class="ButtonBlock-alert" id="AlertButton">Кнопка Alert!</p>
     </div>
-    <div class="Button Button--confirm"><p>Кнопка Confirm!</p></div>
-    <div class="Button Button--prompt"><p>Кнопка Prompt</p></div>
+    <div class="ButtonBlock">
+      <p class="ButtonBlock-confirm" id="ConfirmButton">Кнопка Confirm!</p>
+      <p class="ButtonBlock-confirmAnswer" id="confirmInfo"></p>
+    </div>
+    <div class="ButtonBlock">
+      <p class="ButtonBlock-prompt" id="PromptButton">Кнопка Prompt</p>
+      <p class="ButtonBlock-promptAnswer" id="promptInfo"></p>
+    </div>
   </div>
+  <div class="Alert" id="alert">
+    <div class="Alert-window">
+      <p class="Alert-message">ALARM!!!<br>Detroy robot monster moon attack!</p>
+      <button class="Alert-button">Ok!</button>
+      <button class="Alert-closeButton"></button>
+    </div>
+  </div>
+  <div class="Confirm" id="confirm">
+    <div class="Confirm-window">
+      <p class="Confirm-message">Alert! Question!<br>Do you agree with me???</p>
+      <button class="Confirm-yesButton">Yes!</button>
+      <button class="Confirm-noButton">NO(</button>
+      <button class="Confirm-closeButton"></button>
+    </div>
+  </div>
+  <div class="Prompt" id="prompt">
+    <div class="Prompt-window">
+      <label class="Prompt-message" >Write your answer here!
+        <input class="Prompt-inputText" type="text">
+      </label>
+      <button class="Prompt-yesButton">Ok!</button>
+      <button class="Prompt-noButton">Oh god, why?!</button>
+      <button class="Prompt-closeButton"></button>
+    </div>
+  </div>
+  <script>
+    DomContentLoaded = function () {
+      var alarm = new AlertWindow(document.getElementById("alert"));
+      alarm.render();
+      var confirm = new ConfirmWindow(document.getElementById("confirm"));
+      confirm.render();
+      var prompt = new PromptWindow(document.getElementById("prompt"));
+      prompt.render();
+    }();
+  </script>
 </body>
 </html>

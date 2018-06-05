@@ -1,7 +1,4 @@
-var PopupWindow = function (rootElement) {
-  this.rootElement = rootElement;
-  this.closeBtn = this.rootElement.querySelector('.Alert-closeButton');
-  this.isActive = this.rootElement.classList.contains(this.classNames.active);
+var PopupWindow = function () {
   this.toggleOpen = this.toggleOpen.bind(this);
 };
 
@@ -37,20 +34,14 @@ PopupWindow.prototype.delegateEvents = function () {
     }
   }.bind(this));
   document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
+    if (event.key === 'Escape' && this.isActive) {
       this.toggleOpen();
     }
   }.bind(this));
-  
+  this.openBtn.addEventListener('click', this.toggleOpen);
   return this;
 };
 
 PopupWindow.prototype.render = function () {
   return this.delegateEvents();
 };
-
-DomContentLoaded = function () {
-  var alarm = new PopupWindow(document.getElementById("alert"));
-  alarm.render();
-}();
-

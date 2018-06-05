@@ -1,4 +1,4 @@
-.Alert {
+.Prompt {
   visibility: hidden;
   position: absolute;
   width: 100%;
@@ -32,7 +32,26 @@
     padding: 20px 20px;
   }
 
-  &-button {
+  &-inputText {
+    border: 1px solid #12335A;
+    width: 260px;
+    min-height: 30px;
+    overflow-wrap: break-word;
+  }
+
+  &-yesButton {
+    border: 1px solid #12335A;
+    padding: 10px 26px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15pt;
+
+    &:hover {
+      background-color: #00C5F5;
+    }
+  }
+
+  &-noButton {
     border: 1px solid #12335A;
     padding: 10px 26px;
     border-radius: 10px;
