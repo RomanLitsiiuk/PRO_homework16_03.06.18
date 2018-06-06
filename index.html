@@ -34,8 +34,10 @@
   <div class="Confirm" id="confirm">
     <div class="Confirm-window">
       <p class="Confirm-message">Alert! Question!<br>Do you agree with me???</p>
-      <button class="Confirm-yesButton"></button>
-      <button class="Confirm-noButton"></button>
+      <div>
+        <button class="Confirm-yesButton"></button>
+        <button class="Confirm-noButton"></button>
+      </div>
       <button class="Confirm-closeButton"></button>
     </div>
   </div>
@@ -44,20 +46,20 @@
       <label class="Prompt-message" >Write your answer here!
         <input class="Prompt-inputText" type="text">
       </label>
-      <button class="Prompt-yesButton"></button>
-      <button class="Prompt-noButton"></button>
+      <div>
+        <button class="Prompt-yesButton"></button>
+        <button class="Prompt-noButton"></button>
+      </div>
       <button class="Prompt-closeButton"></button>
     </div>
   </div>
   <script>
-    DomContentLoaded = function () {
-      var alarm = new AlertWindow(document.getElementById("alert"), 'danger');
-      alarm.render();
-      var confirm = new ConfirmWindow(document.getElementById("confirm"), 'warning');
-      confirm.render();
-      var prompt = new PromptWindow(document.getElementById("prompt"), 'info');
-      prompt.render();
-    }();
+    var alarm = new AlertWindow(document.getElementById("alert"), 'danger');
+    alarm.render();
+    var confirm = new ConfirmWindow(document.getElementById("confirm"), 'warning');
+    confirm.render();
+    var prompt = new PromptWindow(document.getElementById("prompt"), 'info');
+    prompt.render();
   </script>
 </body>
 </html>

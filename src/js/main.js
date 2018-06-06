@@ -1,6 +1,7 @@
 var PopupWindow = function () {
   this.toggleOpen = this.toggleOpen.bind(this);
   this.changeButtonNames = this.changeButtonNames.bind(this);
+  this.isActive = this.rootElement.classList.contains(this.classNames.active);
 };
 
 PopupWindow.prototype.classNames = {

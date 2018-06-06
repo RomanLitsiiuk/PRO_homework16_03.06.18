@@ -95,20 +95,20 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 .u-danger {
-  border: 1px solid #12335A;
-  background-color: #F1F0F0;
+  border: 1px solid #820333;
+  background-color: #F0433A;
 }
 .u-warning {
-  border: 1px solid #12335A;
-  background-color: #F1F0F0;
+  border: 1px solid #D75749;
+  background-color: #F8BF39;
 }
 .u-success {
-  border: 1px solid #12335A;
-  background-color: #F1F0F0;
+  border: 1px solid #11365A;
+  background-color: #27BCC2;
 }
 .u-info {
-  border: 1px solid #12335A;
-  background-color: #F1F0F0;
+  border: 1px solid #193441;
+  background-color: #D1DBBD;
 }
 html,
 body {
@@ -129,37 +129,43 @@ body {
   align-items: center;
 }
 .ButtonBlock-alert {
-  border: 1px solid black;
+  border: 1px solid #0C6064;
+  border-radius: 10px;
   width: 200px;
   padding: 20px 0;
   margin: 30px 50px;
   text-align: center;
-  background-color: #ccc;
+  background-color: #B2CDB9;
 }
 .ButtonBlock-alert:hover {
   cursor: pointer;
+  background-color: #41BDB5;
 }
 .ButtonBlock-confirm {
-  border: 1px solid black;
+  border: 1px solid #0C6064;
+  border-radius: 10px;
   width: 200px;
   padding: 20px 0;
   margin: 30px 50px;
   text-align: center;
-  background-color: #ccc;
+  background-color: #41BDB5;
 }
 .ButtonBlock-confirm:hover {
   cursor: pointer;
+  background-color: #41BDB5;
 }
 .ButtonBlock-prompt {
-  border: 1px solid black;
+  border: 1px solid #0C6064;
+  border-radius: 10px;
   width: 200px;
   padding: 20px 0;
   margin: 30px 50px;
   text-align: center;
-  background-color: #ccc;
+  background-color: #41BDB5;
 }
 .ButtonBlock-prompt:hover {
   cursor: pointer;
+  background-color: #41BDB5;
 }
 .ButtonBlock-confirmAnswer {
   border: 1px solid #11625B;
@@ -208,8 +214,8 @@ body {
 .Alert-message {
   text-align: center;
   font-size: 20pt;
-  color: #D8403E;
-  padding: 20px 20px;
+  color: #313335;
+  padding: 40px 20px 0;
 }
 .Alert-button {
   border: 1px solid #12335A;
@@ -222,7 +228,6 @@ body {
   background-color: #00C5F5;
 }
 .Alert-closeButton {
-  border: 1px solid #12335A;
   background: url("../../src/images/close.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -265,7 +270,7 @@ body {
   text-align: center;
   font-size: 20pt;
   color: #D8403E;
-  padding: 20px 20px;
+  padding: 40px 20px;
 }
 .Confirm-yesButton {
   border: 1px solid #12335A;
@@ -273,6 +278,7 @@ body {
   border-radius: 10px;
   text-align: center;
   font-size: 15pt;
+  margin: 0 20px;
 }
 .Confirm-yesButton:hover {
   background-color: #00C5F5;
@@ -283,12 +289,12 @@ body {
   border-radius: 10px;
   text-align: center;
   font-size: 15pt;
+  margin: 0 20px;
 }
 .Confirm-noButton:hover {
   background-color: #00C5F5;
 }
 .Confirm-closeButton {
-  border: 1px solid #12335A;
   background: url("../../src/images/close.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -338,6 +344,7 @@ body {
   width: 260px;
   min-height: 30px;
   overflow-wrap: break-word;
+  margin: 30px 0 0 0;
 }
 .Prompt-yesButton {
   border: 1px solid #12335A;
@@ -345,6 +352,7 @@ body {
   border-radius: 10px;
   text-align: center;
   font-size: 15pt;
+  margin: 0 10px;
 }
 .Prompt-yesButton:hover {
   background-color: #00C5F5;
@@ -355,12 +363,12 @@ body {
   border-radius: 10px;
   text-align: center;
   font-size: 15pt;
+  margin: 0 10px;
 }
 .Prompt-noButton:hover {
   background-color: #00C5F5;
 }
 .Prompt-closeButton {
-  border: 1px solid #12335A;
   background: url("../../src/images/close.png");
   background-repeat: no-repeat;
   background-position: center;
