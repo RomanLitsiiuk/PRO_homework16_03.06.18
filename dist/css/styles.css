@@ -135,11 +135,11 @@ body {
   padding: 20px 0;
   margin: 30px 50px;
   text-align: center;
-  background-color: #B2CDB9;
+  background-color: #41BDB5;
 }
 .ButtonBlock-alert:hover {
   cursor: pointer;
-  background-color: #41BDB5;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8) inset;
 }
 .ButtonBlock-confirm {
   border: 1px solid #0C6064;
@@ -152,7 +152,7 @@ body {
 }
 .ButtonBlock-confirm:hover {
   cursor: pointer;
-  background-color: #41BDB5;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8) inset;
 }
 .ButtonBlock-prompt {
   border: 1px solid #0C6064;
@@ -165,7 +165,7 @@ body {
 }
 .ButtonBlock-prompt:hover {
   cursor: pointer;
-  background-color: #41BDB5;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8) inset;
 }
 .ButtonBlock-confirmAnswer {
   border: 1px solid #11625B;
@@ -176,6 +176,7 @@ body {
   align-items: center;
   padding-left: 20px;
   box-sizing: border-box;
+  box-shadow: 0 16px 16px 6px rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(0, 0, 0, 0.5) inset;
 }
 .ButtonBlock-promptAnswer {
   border: 1px solid #11625B;
@@ -186,6 +187,7 @@ body {
   align-items: center;
   padding-left: 20px;
   box-sizing: border-box;
+  box-shadow: 0 16px 16px 6px rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(0, 0, 0, 0.5) inset;
 }
 .Alert {
   visibility: hidden;
@@ -210,6 +212,7 @@ body {
   position: absolute;
   top: calc((100vh / 2) - 120px);
   left: calc(50% - 170px);
+  transform: scale(0);
 }
 .Alert-message {
   text-align: center;
@@ -225,7 +228,7 @@ body {
   font-size: 15pt;
 }
 .Alert-button:hover {
-  background-color: #00C5F5;
+  background-color: #41BDB5;
 }
 .Alert-closeButton {
   background: url("../../src/images/close.png");
@@ -241,6 +244,10 @@ body {
 }
 .Alert.isActive {
   visibility: visible;
+}
+.Alert.isActive > .Alert-window {
+  transform: scale(1);
+  transition: transform 0.5s;
 }
 .Confirm {
   visibility: hidden;
@@ -265,11 +272,12 @@ body {
   position: absolute;
   top: calc((100vh / 2) - 120px);
   left: calc(50% - 170px);
+  transform: scale(0);
 }
 .Confirm-message {
   text-align: center;
   font-size: 20pt;
-  color: #D8403E;
+  color: #313335;
   padding: 40px 20px;
 }
 .Confirm-yesButton {
@@ -281,7 +289,7 @@ body {
   margin: 0 20px;
 }
 .Confirm-yesButton:hover {
-  background-color: #00C5F5;
+  background-color: #41BDB5;
 }
 .Confirm-noButton {
   border: 1px solid #12335A;
@@ -292,7 +300,7 @@ body {
   margin: 0 20px;
 }
 .Confirm-noButton:hover {
-  background-color: #00C5F5;
+  background-color: #41BDB5;
 }
 .Confirm-closeButton {
   background: url("../../src/images/close.png");
@@ -308,6 +316,10 @@ body {
 }
 .Confirm.isActive {
   visibility: visible;
+}
+.Confirm.isActive > .Confirm-window {
+  transform: scale(1);
+  transition: transform 0.5s;
 }
 .Prompt {
   visibility: hidden;
@@ -332,19 +344,22 @@ body {
   position: absolute;
   top: calc((100vh / 2) - 120px);
   left: calc(50% - 170px);
+  transform: scale(0);
 }
 .Prompt-message {
   text-align: center;
   font-size: 20pt;
-  color: #D8403E;
+  color: #313335;
   padding: 20px 20px;
+  animation: visibility 1s linear;
 }
 .Prompt-inputText {
   border: 1px solid #12335A;
   width: 260px;
   min-height: 30px;
-  overflow-wrap: break-word;
+  padding-left: 10px;
   margin: 30px 0 0 0;
+  box-shadow: 0 16px 16px 6px rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(0, 0, 0, 0.5) inset;
 }
 .Prompt-yesButton {
   border: 1px solid #12335A;
@@ -355,7 +370,7 @@ body {
   margin: 0 10px;
 }
 .Prompt-yesButton:hover {
-  background-color: #00C5F5;
+  background-color: #41BDB5;
 }
 .Prompt-noButton {
   border: 1px solid #12335A;
@@ -366,7 +381,7 @@ body {
   margin: 0 10px;
 }
 .Prompt-noButton:hover {
-  background-color: #00C5F5;
+  background-color: #41BDB5;
 }
 .Prompt-closeButton {
   background: url("../../src/images/close.png");
@@ -379,7 +394,18 @@ body {
   position: absolute;
   top: 2px;
   right: 2px;
+  transition: border 1s;
 }
 .Prompt.isActive {
   visibility: visible;
 }
+.Prompt.isActive > .Prompt-window {
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+/*@keyframes size {
+  from {width: 0;
+  height: 0}
+  to {width: 340px;
+  height: 240px}
+}*/

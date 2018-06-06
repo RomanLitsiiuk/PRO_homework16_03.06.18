@@ -31,6 +31,6 @@ PromptWindow.prototype.confirmEvent = function () {
 };
 
 PromptWindow.prototype.ButtonsNames = {
-  yesButton: 'Ok!',
-  noButton: 'Oh, god! Why?'
+  yesButton: 'Send',
+  noButton: "I don't drink("
 };

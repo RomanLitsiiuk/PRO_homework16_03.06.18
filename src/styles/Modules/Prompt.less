@@ -21,21 +21,25 @@
     position: absolute;
     top: calc(~"(100vh / 2) - 120px");
     left: calc(~ "50% - 170px");
+    transform: scale(0);
   }
 
   &-message {
     text-align: center;
     font-size: 20pt;
-    color: #D8403E;
+    color: #313335;
     padding: 20px 20px;
+    animation: visibility 1s linear;
   }
 
   &-inputText {
     border: 1px solid #12335A;
     width: 260px;
     min-height: 30px;
-    overflow-wrap: break-word;
+    padding-left: 10px;
     margin: 30px 0 0 0;
+    box-shadow: 0 16px 16px 6px rgba(0,0,0,0.06) inset,
+    0 1px 1px rgba(0,0,0,0.5) inset;
   }
 
   &-yesButton {
@@ -47,7 +51,7 @@
     margin: 0 10px;
 
     &:hover {
-      background-color: #00C5F5;
+      background-color: #41BDB5;
     }
   }
 
@@ -60,7 +64,7 @@
     margin: 0 10px;
 
     &:hover {
-      background-color: #00C5F5;
+      background-color: #41BDB5;
     }
   }
 
@@ -75,9 +79,23 @@
     position: absolute;
     top: 2px;
     right: 2px;
+    transition: border 1s;
   }
 
   &.isActive {
     visibility: visible;
+
+    &> .Prompt-window {
+      transform: scale(1);
+      transition: transform 0.5s;
+    }
   }
 }
+
+/*@keyframes size {
+  from {width: 0;
+  height: 0}
+  to {width: 340px;
+  height: 240px}
+}*/
+

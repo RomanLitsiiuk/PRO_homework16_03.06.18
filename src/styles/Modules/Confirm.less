@@ -21,12 +21,13 @@
     position: absolute;
     top: calc(~"(100vh / 2) - 120px");
     left: calc(~ "50% - 170px");
+    transform: scale(0);
   }
 
   &-message {
     text-align: center;
     font-size: 20pt;
-    color: #D8403E;
+    color: #313335;
     padding: 40px 20px;
   }
 
@@ -39,7 +40,7 @@
     margin: 0 20px;
 
     &:hover {
-      background-color: #00C5F5;
+      background-color: #41BDB5;
     }
   }
 
@@ -53,7 +54,7 @@
 
 
     &:hover {
-      background-color: #00C5F5;
+      background-color: #41BDB5;
     }
   }
 
@@ -72,5 +73,10 @@
 
   &.isActive {
     visibility: visible;
+
+    &> .Confirm-window {
+      transform: scale(1);
+      transition: transform 0.5s;
+    }
   }
 }
