@@ -94,6 +94,22 @@ html,
 body {
   font-family: 'Roboto', sans-serif;
 }
+.u-danger {
+  border: 1px solid #12335A;
+  background-color: #F1F0F0;
+}
+.u-warning {
+  border: 1px solid #12335A;
+  background-color: #F1F0F0;
+}
+.u-success {
+  border: 1px solid #12335A;
+  background-color: #F1F0F0;
+}
+.u-info {
+  border: 1px solid #12335A;
+  background-color: #F1F0F0;
+}
 html,
 body {
   height: 100%;
@@ -176,11 +192,9 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .Alert-window {
-  border: 1px solid #12335A;
   width: 340px;
   height: 240px;
   box-sizing: border-box;
-  background-color: #F1F0F0;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -234,11 +248,9 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .Confirm-window {
-  border: 1px solid #12335A;
   width: 340px;
   height: 240px;
   box-sizing: border-box;
-  background-color: #F1F0F0;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -302,11 +314,9 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .Prompt-window {
-  border: 1px solid #12335A;
   width: 340px;
   height: 240px;
   box-sizing: border-box;
-  background-color: #F1F0F0;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
